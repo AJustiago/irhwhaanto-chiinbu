@@ -1,0 +1,126 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+  
+.custom-login-container{
+    background-color: white;
+    width: 800px;
+    height: 450px;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: -2px 3px 16px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px 3px 16px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 3px 16px 0px rgba(0, 0, 0, 0.75);
+    position: relative;
+    z-index: 1;
+}
+.left-side-container{
+    width: 450px;
+    height: 450px;
+}
+.right-side-container{
+    width: 350px;
+    height: 450px;
+}
+.right-side-container img{
+    width: 325px;
+    height: 325px;
+    position: absolute;
+    left: -55px;
+    bottom: 50px;
+    transform: rotate(15deg);   
+    animation: slideIn 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+@keyframes slideIn {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+.login-form-wrapper{
+    width: 375px;
+    height: 325px;
+}
+.wrapper-up{
+    width: 350px;
+    height: 75px;
+    color: #999999;
+    cursor: pointer;
+}
+.active-heading {
+    position: relative;
+    color: var(--first-color);
+    transition: all 0.5s ease;
+}
+.wrapper-down{
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+.bar {
+    width: 0%;
+    height: 3px;
+    background-color: var(--first-color);
+    transition: width 0.5s ease;
+}
+.active-bar {
+    width: 100%;    
+}
+.custom-floating-label {
+    height: 60px;
+}
+.forgot-password a {
+    text-decoration: none;
+    color: var(--first-color);
+}
+.custom-form-control:focus {
+    background-color: transparent !important;
+    box-shadow: none !important; 
+    border-color: #73cfc0 !important; 
+    outline: none !important; 
+}
+.circle-1{
+    width: 550px;
+    height: 450px;
+    border-radius: 50%;
+    background-color: var(--third-color);
+    transform: translateX(15px);
+   
+}
+.circle-2{
+    width: 550px;
+    height: 450px;
+    border-radius: 50%;
+    background-color: var(--second-color);
+    transform: translateX(50px);
+}
+.circle-3{
+    width: 525px;
+    height: 450px;
+    border-radius: 50%;
+    background-color: var(--first-color);
+    transform: translateX(70px);
+}
+.circle-up{
+    top: -200px;
+    left: -200px;
+    position: absolute;
+    transform: rotate(-135deg);
+    z-index: 0;
+}
+.circle-down{
+    bottom: -150px;
+    right: -200px;
+    position: absolute;
+    transform: rotate(45deg);
+    z-index: 0;
+}

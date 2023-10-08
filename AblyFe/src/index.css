@@ -1,0 +1,10 @@
+:root {
+    --first-color: #73cebf;
+    --second-color: #a7e1d8;
+    --third-color: #dcf3ef;
+}
+
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
