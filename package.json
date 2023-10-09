@@ -13,7 +13,13 @@
   "dependencies": {
     "ably": "^1.2.45",
     "async": "^3.2.4",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
     "dotenv": "^16.3.1",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "logrocket": "^6.0.0",
+    "mysql": "^2.18.1",
+    "pg": "^8.11.3"
   }
 }
