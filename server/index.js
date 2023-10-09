@@ -55,6 +55,28 @@ async function startApp() {
         res.status(201).json({ message: "Registration successful" });
     });
 
+    // Endpoint for user login
+    app.post("/auth/login", async (req, res) => {
+        const { email, password } = req.body;
+
+        // Check if the email exists in the database
+        const existingUser = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
+
+        if (existingUser.rows.length === 0) {
+            return res.status(401).json({ message: "Invalid email or password" });
+        }
+
+        // Compare the provided password with the hashed password in the database
+        const user = existingUser.rows[0];
+        const passwordMatch = await bcrypt.compare(password, user.password);
+
+        if (!passwordMatch) {
+            return res.status(401).json({ message: "Invalid email or password" });
+        }
+
+        res.status(200).json({ message: "Login successful", /* token: token */ });
+    });
+
     app.get("/api", (req, res) => {
         res.json({ message: "PING!!" });
     });
