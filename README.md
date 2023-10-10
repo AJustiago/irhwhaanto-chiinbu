@@ -1,2 +1,0 @@
-# irhwhaanto-chiinbu
-# ahlekh - gaeh

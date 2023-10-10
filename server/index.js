@@ -82,10 +82,9 @@ async function startApp() {
     });
 }
 
-startApp();
-
 app.listen(port, () => {
     console.log(`Server listening on ${port}`);
+    startApp();
 });
 
 // SDK SERVICE
